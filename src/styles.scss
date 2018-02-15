@@ -1,1 +1,117 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css?family=Shadows+Into+Light');
+
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	background: #EEE;
+	color: #3A3A3A;
+	font: 1.125em/1.62 sans-serif;
+} 
+
+.wrap, 
+.main-header .inner {
+	margin: auto;
+	width: 90%;
+}
+.main-header {
+	margin-bottom: 1.5em;
+ 	border-top: 8px solid #2C3E50; 
+	background: #3C5269;
+	overflow: hidden;
+}
+.logo {
+	font-family: 'shadows Into Light', cursive; 
+	font-size: 30px;
+}
+.logo, 
+.main-nav a {
+	display: block;
+	color: #FFF;
+	text-decoration: none;
+}
+.logo::before {
+	display: inline-block;
+	margin: -4px 0 10px 0;
+	padding: .4em .8em;
+	border-radius: 5px;
+	background: #3498DB;
+	color: #FFF;
+	font-weight: normal;
+	font-style: normal;
+	font-size: 2em;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+.main-nav {
+	margin-top: 10px;
+}
+.main-nav a {
+	margin-top: 1px;
+	padding: .6em .8em;
+	background: #2B3C4E;
+	color: rgba(255,255,255, .8);
+}
+.main-nav a:first-child {
+	border-radius: 8px 8px 0 0;
+}
+.main-nav a:last-child {
+	margin-right: 0;
+	border-right: none;
+}
+
+/* Clearfix */
+
+.group:before,
+.group:after {
+    content: " ";
+    display: table;
+}
+.group:after {
+    clear: both;
+}
+
+
+
+
+
+@media screen and (min-width: 769px) {
+	.main-header {
+		padding: 35px 0 25px;
+	}
+	.main-header .inner {
+		padding-left: 2.4%;
+	}
+	.logo {
+		float: left;
+	}
+	.main-nav {
+		float: right; 
+	}
+	.main-nav a, 
+	.main-nav a:first-child {
+		display: inline-block;
+		margin: 0 .2em;
+		padding: .35em 1em;
+		border-radius: 8px;
+	}
+	
+}
+@media screen and (min-width: 1024px) {	
+	 
+	.main-header .inner {
+		width: 1000px;
+	}
+}
+
+/* print view */
+@media print {
+	* {
+		background: transparent; 
+	}
+}
